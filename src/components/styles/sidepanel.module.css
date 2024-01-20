@@ -1,0 +1,35 @@
+.body {
+padding: 0.5rem;
+padding-left: 0;
+}
+.bodyContainer{
+    width: 25rem;
+    background-color: white;
+    height: 100%;
+    border-radius: 1rem;
+    overflow: scroll;
+}
+
+.header {
+    width: 100%;
+    height: 4.5rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(16px);
+    padding: 0 1.5rem;
+    position: sticky;
+    z-index: 1;
+   }
+   
+   .headerContainer{
+     width: 100%;
+     height: 100%;
+     border-bottom: 1px solid;
+     border-color: #E5E8EA;
+     display: flex;
+     align-items: center;
+   }
+
+
+.content {
+padding: 1.5rem;
+}

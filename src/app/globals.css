@@ -36,10 +36,13 @@ body {
 
 body {
   color: var(--gray-900);
-  background: var(--gray-100);
   display: flex;
   height: 100vh;
   width: 100vw;
+}
+
+.body {
+  background: var(--gray-100);
 }
 
 a {
@@ -93,15 +96,40 @@ table tbody tr:last-child {
   letter-spacing: 0.25;
 }
 
-.sidebar {
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.sidebar-open {
   flex: 1;
   max-width: 15.5rem;
   padding: 1rem 0.5rem 0.5rem 0;
   display: flex;
   flex-direction: column;
 }
-.sidebar-logo {
-  padding-left: 1rem;
+.sidebar-collapsed {
+  display: flex;
+  max-width: 15.5rem;
+  flex-direction: column;
+  padding: 1rem 0.5rem 0.5rem 0;
+}
+.sidebar-logo-section {
+  margin-left: 1rem;
+  display: flex;
+  gap: 6px;
+}
+.sidebar-logo-section-collapsed {
+  margin-left: 0.75rem;
+}
+.sidebar-logotype {
+  margin-left: 1rem;
+  min-width: 88px;
+  min-height: 32px;
+}
+.sidebar-logoicon {
+  margin-left: 0.75rem;
 }
 .sidebar-items {
   padding: 1rem 0;
@@ -126,8 +154,14 @@ table tbody tr:last-child {
   gap: 0.625rem;
 }
 .sidebar-item:hover {
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: var(--black-3);
   color: var(--gray-900);
+}
+.sidebar-active-item {
+  background-color: var(--black-5);
+  border-left: 4px solid var(--gray-900);
+  color: var(--gray-900);
+  padding-left: 0.75rem;
 }
 .sidebar-category-title {
   font-size: 11px;
@@ -139,9 +173,11 @@ table tbody tr:last-child {
   text-transform: uppercase;
   padding-left: 1rem;
   padding-bottom: 0.125rem;
+  min-height: 1.125rem;
 }
 
 .sidebar-user {
+  height: 3.5rem;
   padding: 0.5rem 1rem;
   border-radius: 0 4rem 4rem 0;
   display: flex;
@@ -162,7 +198,7 @@ table tbody tr:last-child {
   border: 1px solid var(--black-10);
 }
 .user-info {
-  flex: 1
+  flex: 1;
 }
 .user-name {
   overflow: hidden;
@@ -183,13 +219,22 @@ font-weight: 400;
 line-height: 16px; /* 133.333% */
 letter-spacing: 0.2px;
 }
-.sidebar-collapse{
+.sidebar-toggle-collapse{
   margin-top: 0.5rem;
   padding: 0.5rem 1rem;
   border-radius: 0 4rem 4rem 0;
   background-color: var(--black-5);
   display: flex;
   flex-direction: row-reverse;
+  color: var(--black-50);
+  cursor: pointer;
+}
+.sidebar-toggle-collapse:hover {
+  background-color: var(--black-10);
+  color: var(--gray-900);
+}
+.sidebar-toggle-icon-collapsed {
+  transform: rotate(180deg);
 }
 
 .content {
