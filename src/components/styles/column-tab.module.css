@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.title {
+    color:  #70777C;
+    /* Ariel Headings/All Caps */
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 145.455% */
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    padding: 0 1rem;
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    padding: 0.5rem 1rem;
+color: #70777C;
+text-overflow: ellipsis;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; 
+letter-spacing: 0.25px;
+border-radius: 2rem;
+}
+
+.item:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
