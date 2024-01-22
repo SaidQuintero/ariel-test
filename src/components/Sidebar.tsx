@@ -21,11 +21,9 @@ export default function Sidebar() {
   const [collapsed, setCollapsed] = useState(false);
   return (
     <nav
-      className={clsx(
-        "transition-all",
-        { "sidebar-collapsed": collapsed },
-        { "sidebar-open": !collapsed }
-      )}
+      className={clsx("transition-all", "sidebar", {
+        "sidebar-open": !collapsed,
+      })}
     >
       <div
         className={clsx("sidebar-logo-section", {
